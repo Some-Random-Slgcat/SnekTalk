@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
+    <title>Snektalk</title>   
+  </head>
+  <body>    
+    <!--<div class="sidenav">
+      
+    </div>-->
+    
+    <div class="main">
+    <div id="chat">  
+      <center>
+        <div id="chatm"><ul id="messages"></ul></div>
+      </center>   
+          
+    </div>    
+    </div>
+    <form id="send-message">
+      <input id="chat-txt" type="text"  aria-selected="true"/>
+      <button id="chat-btn" type="submit"><i class='fa fa-send'></i></button>
+    </form>    
+    <form id="padding">
+    </form>
+    
+<div id="bottom"> </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script src="script.js"></script>   
+  </body>
+  <style>
+    
+
+.box3 {
+  font-size: 20px;
+  max-width: 300px;
+  min-width: 10px;
+  width: auto;
+  margin: 30px auto;
+  border-radius: 15px;
+  background: #7c7c7c;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-weight: 2px;
+  font-family: arial;
+  position: relative;
+  margin-right:auto;
+  margin-left:20px;
+  word-wrap: break-word;
+}
+
+.box2{
+  font-size: 20px;
+  width: auto;
+  max-width: 300px;
+  min-width: 10px;
+  margin: 30px auto;
+  border-radius: 15px;
+  background: #00bf5f;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-weight: 2px;
+  font-family: arial;
+  position: relative;
+  margin-left:auto;
+  margin-right:20px;
+  word-wrap: break-word;
+}
+
+.sb13:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 15px solid #00bf5f;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #00bf5f;
+  border-bottom: 15px solid transparent;
+  right: -16px;
+  top: 0px;
+}
+
+
+.sb14:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid #7c7c7c;
+  border-top: 15px solid #7c7c7c;
+  border-bottom: 15px solid transparent;
+  left: -16px;
+  top: 0px;
+} 
+  
+  #chat-txt{
+    width: 82%;
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+    padding: 5px;
+    background-color: #00bf5f;
+    border-radius: 50px;
+    border-style: none;
+    
+
+  }
+  #chat-btn{
+    position: fixed;
+    bottom: 15px;
+    right: 13px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color: #00bf5f;
+    border-radius: 50px;
+    border-style: none;
+    size: 100px;
+    color: white;
+  }
+  #notifi{
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color: #00bf5f;
+    border-radius: 50px;
+    border-style: none;
+    size: 100px;
+    color: white;
+  }
+  /*#chatm{
+    height: 90%;
+    box-sizing:border-box;
+  }*/
+  html{
+    background: #2b2b2b;
+  }
+  #chat{
+    height: 95%;
+  }
+  .sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+  .main {
+  height: 90%;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#send-message{
+  background-color: #2b2b2b;
+  padding: 20px;
+  padding-top: 20px;
+  margin-top:auto;
+  margin-bottom:0px;
+  position: fixed;
+  width: 100vw;
+  height: 30px;
+  left: 0vw;
+  bottom: 0%;
+  z-index: 100;
+}
+#padding{
+  background-color: #2b2b2b;
+  padding: 20px;
+  padding-top: 20px;
+  margin-top:auto;
+  margin-bottom:0px;
+  position: auto;
+  z-index: 100;
+}
+  </style>
+</html>

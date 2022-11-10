@@ -1,0 +1,27 @@
+.box3 {
+    width: 300px;
+    margin: 50px auto;
+    border-radius: 15px;
+    background: #00bfb6;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: arial;
+    position: relative;
+  }
+  .sb14:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid #00bfb6;
+    border-top: 15px solid #00bfb6;
+    border-bottom: 15px solid transparent;
+    left: -16px;
+    top: 0px;
+  }
+  #chat-txt{
+    position: fixed;
+    bottom: 20px;
+  }
